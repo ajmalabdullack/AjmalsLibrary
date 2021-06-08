@@ -216,15 +216,33 @@ a,a:hover {
   padding: 20px;
   display: flex;
   justify-content: center;
-  color:black;
+  color: black;
   background-image: linear-gradient(to bottom right, rgb(12, 12, 12), rgb(153, 149, 149));
- 
   
  }
  .signupform{
   padding: 20px;
   color: white;
   border: 1px solid white;
+  
+}
+
+.imgwelcome{
+  display: flex;
+  justify-content: center;
+}
+.txt{
+  position: absolute;
+  top: 150px;
+  color: white;
+  font-size: 80px;
+}
+
+.txt1{
+  position: absolute;
+  top: 250px;
+  color: white;
+  font-size: 80px;
 }
 
     

@@ -27,9 +27,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <%for(i=0;i<nav.length;i++){%>
+          <%for(i=0;i<nwnav.length;i++){%>
         <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+          <a href="<%=nwnav[i].link%>"><%=nwnav[i].name%></a>
         </li>
         <%}%>
       </ul>
@@ -93,29 +93,50 @@
            <!-- sign up form strats here -->
           <div class="row signupform-cont">  
             <div class="col-lg-4 signupform">
-                <h4 class="display-6 signupheading">New here? Create an account</h4><br>
-              <form action="" onsubmit="return !! (validate() & validateName() & validatepassword() & validateconfirmpwd());">
+                <!-- <h class=" signupheading"></h4><br> -->
+              <form  action="/signup/add" method="POST" onsubmit="return !! (validate() & validatepassword() & validateconfirmpwd());">
                   
                   <label for="full name">Fullname</label>
-                  <input type="text" class="form-control" id="fullname" placeholder="Full name">
+                  <input type="text" class="form-control" id="fullname" placeholder="Full name" name="name" required>
                   <label for="error" id="name-error"></label>
                   <br>
                 
-                  <label for="email">Email address</label>
-                  <input type="text" class="form-control"  id="Email" placeholder="email@example.com">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control"  id="Email" placeholder="email@example.com" name="email">
                   <label for="error" id="error"></label><br>
                 
                   <label for="Password">Password</label>
-                  <input type="password" onkeyup="return validatepassword();" class="form-control" id="password" placeholder="Password" title="Must contain at least one number and special character and one uppercase  and lowercase letter, and atleast 8 or more character">
+                  <input type="password" onkeyup="return validatepassword();" class="form-control" id="password" placeholder="Password" name="password" >
                   <label for="passworderror" id="passerror"></label><br>
                 
-                  <label for="Password">Confirm Password</label>
-                  <input type="password" class="form-control" id="confirmpwd" placeholder="Password">
-                  <label for="confirm password" id="confirm-pwd-error"></label> <br>
+                  <label for="confirm Password">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirmpwd" placeholder=" Confirm Password">
+                  <label for="confirm password error" id="confirm-pwd-error"></label> <br>
     
                 <button type="submit" id="submit" class="btn btn-primary btnlogin">Submit</button>
               </form>
             </div> 
+            <!-- <form method="POST" action="/">
+          
+              <label for="book name">Book Name</label>
+              <input type="text" class="form-control" id="bookname" placeholder="Book Name" required name="title">
+              <label for="error" id="bookname-error"></label><br>
+             
+            
+              <label for="author name">Author Name</label>
+              <input type="text" class="form-control"  id="" placeholder="Author Name" required name="author">
+              <label for="error" id="authorname-error"></label><br>
+    
+              <label for="genre">Genre</label>
+              <input type="text" class="form-control"  id="" placeholder="Genre" required name="genre">
+              <label for="error" id="genre-error"></label><br>
+    
+              <label for="image">Image</label>
+              <input type="file" class="form-control"  id="" placeholder="Image" required name="image">
+              <label for="error" id="img-error"></label><br>
+    
+            <button type="submit" id="submit" class="btn btn-primary" >Add Book</button> <br>
+          </form> -->
           </div>
           
    

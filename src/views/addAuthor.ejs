@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
+      <!-- <a href="/home" class="navbar-brand">Home</a> -->
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -32,6 +32,9 @@
           <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
         </li>
         <%}%>
+        <li>
+          <a href="/">Logout</a>
+        </li>
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -95,23 +98,23 @@
       <div class="col-lg-4 addauthorform ">
         <h1 class="addauthor-heading">Add Author <br> Here</h1>
          <p class="h6"></p>
-      <form action="#" >
+      <form  method="POST" action="/addAuthor/add" enctype="multipart/form-data">
           
           <label for="Author name">Author Name</label>
-          <input type="text" class="form-control" id="authorname" placeholder="Author Name" required>
+          <input type="text" class="form-control" id="authorname" placeholder="Author Name" required name="author">
           <label for="error" id="authorname-error"></label><br>
          
         
           <label for="Books name">Books Name</label>
-          <input type="text" class="form-control"  id="" placeholder="Books Name" required>
+          <input type="text" class="form-control"  id="" placeholder="Books Name" required name="books">
           <label for="error" id="booksname-error"></label><br>
 
-          <label for="genre">Language</label>
-          <input type="text" class="form-control"  id="" placeholder="Language" required>
+          <label for="language">Language</label>
+          <input type="text" class="form-control"  id="" placeholder="Language" required name="language">
           <label for="error" id="language-error"></label><br>
 
           <label for="image">Image</label>
-          <input type="file" class="form-control"  id="" placeholder="Image" required>
+          <input type="file" class="form-control"  id="" placeholder="Image" required name="image">
           <label for="error" id="img-error"></label><br>
 
         <button type="submit" id="submit" class="btn btn-primary" >Add Author</button> <br>

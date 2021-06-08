@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
+      <!-- <a href="/home" class="navbar-brand">Home</a> -->
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -32,6 +32,9 @@
           <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
         </li>
         <%}%>
+        <li>
+          <a href="/">Logout</a>
+        </li>
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -94,16 +97,18 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=authors[i].name%></h3>
+              <h3><%=authors[i].author%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=authors[i].books%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].language%> <br>
-                    <a href="/author/<%=i%>" class="text-muted">Read More</a></small>
+                    <a href="/author/<%=authors[i]._id%>" class="text-muted">Read More</a></small>
                   </h4></div>
+                  <a class="btn btn-primary" href="/author/editauthor/<%=authors[i]._id%>">Update</a>
+                  <a class="btn btn-danger" href="/author/delete/<%=authors[i]._id%>">Delete</a>
                 <div class="col-xs-3"></div>
               </div>
               <br><br>

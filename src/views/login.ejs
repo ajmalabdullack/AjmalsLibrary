@@ -27,9 +27,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <%for(i=0;i<nav.length;i++){%>
+          <%for(i=0;i<nwnav.length;i++){%>
         <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+          <a href="<%=nwnav[i].link%>"><%=nwnav[i].name%></a>
         </li>
         <%}%>
       </ul>
@@ -90,18 +90,18 @@
           
           
           <!--/stories-->
-           <!-- sign up form strats here -->
+           <!-- login form strats here -->
           <div class="row loginform-cont">  
       <div class="col-lg-4 loginform ">
         <h1 class="login-heading">Login</h1>
-         <form action="" onsubmit="return !! (validateemail() & validatepass());">
+         <form action="/login/add" method="POST" onsubmit="return !! (validateemail() & validatepass());">
           <label for="Email">Email</label>
-          <input type="email" class="form-control" id="loginemail" placeholder="email@example.com">
+          <input type="email" class="form-control" id="loginemail" placeholder="email@example.com" name="Email">
           <label for="error" id="emailerror"></label><br>
          
         
           <label for="password">Password</label>
-          <input type="password" class="form-control"  id="pwd" placeholder="Password">
+          <input type="password" class="form-control"  id="pwd" placeholder="Password" name="password">
           <label for="error" id="pwderror"></label><br>
 
         <button type="submit" id="submit" class="btn btn-primary btnlogin" >Login</button> <br>

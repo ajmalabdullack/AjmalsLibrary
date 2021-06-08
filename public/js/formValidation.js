@@ -126,14 +126,14 @@ function validatepass(){
     if(strongRegex.test(pwd.value)){
         return true;
     }
-    else if(pwd.value==""){
+     if(pwd.value==""){
         pwderror.innerHTML="Type Password";
         pwd.style.border="1px solid red";
         pwderror.style.color="red";
         return false;
     }
     else{
-        pwderror.innerHTML="Wrong Password";
+        pwderror.innerHTML="Invalid Password";
         pwderror.style.color="red";
         pwd.style.border="1px solid red";
         return false;
